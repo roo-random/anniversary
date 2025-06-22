@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Year With the LOML 💙</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: url('https://i.imgur.com/FUcgxY1.png'), linear-gradient(to bottom, #ffe6f0, #ffffff);
+      background-blend-mode: overlay;
+      background-size: cover;
+      background-repeat: repeat;
+      color: #0d47a1;
+      text-align: center;
+      cursor: url('https://cdn-icons-png.flaticon.com/512/833/833472.png'), auto;
+    }
+    header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.slide, footer {
+  display: none;
+}
+
+    
+    #lock-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: url('https://i.imgur.com/FUcgxY1.png'), linear-gradient(to bottom right, #fce4ec, #ffffff);
+      background-blend-mode: overlay;
+      background-size: cover;
+      background-repeat: repeat;
+      padding: 2rem;
+    }
+    .heart-lock {
+      font-size: 6rem;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .lock-text {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .date-inputs input {
+      margin: 0.3rem;
+      padding: 0.5rem;
+      width: 3rem;
+      border-radius: 10px;
+      border: 1px solid #90caf9;
+      text-align: center;
+    }
+    .date-inputs {
+      margin-bottom: 1rem;
+    }
+    button {
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .error-message {
+      color: red;
+      margin-top: 1rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+    }
+    .caption {
+      font-style: italic;
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+    }
+    .navigation {
+      margin-top: 2rem;
+    }
+    .love-letter {
+      background: rgba(255, 255, 255, 0.6);
+      padding: 2rem;
+      border-radius: 20px;
+      font-style: italic;
+      max-width: 700px;
+      margin: 0 auto;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    ol {
+      text-align: left;
+      max-width: 600px;
+      margin: 1rem auto;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="this-town.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="lock-screen">
+    <div class="heart-lock">🔒💖</div>
+    <div class="lock-text">The day we found each other</div>
+    <div class="date-inputs">
+      <input type="text" id="day" placeholder="DD" maxlength="2" />
+      <input type="text" id="month" placeholder="MM" maxlength="2" />
+      <input type="text" id="year" placeholder="YYYY" maxlength="4" />
+    </div>
+    <button onclick="checkDate()">Unlock</button>
+    <div id="error" class="error-message"></div>
+  </div>
+
+  <div class="slide" id="slide1">
+    <header>
+      <h1>The Journey of Our Love Story 💙</h1>
+    </header>
+    <section class="gallery">
+      <div>
+        <img src="ph1.jpg" alt="Memory 1">
+        <div class="caption">erayet el fatha. el kan ahla youm fe haytie w 3erft fe my soulmate w ba2ena semi-official</div>
+      </div>
+      <div>
+        <img src="ph2.jpg" alt="Memory 2">
+        <div class="caption">w de outfits awel mara et2blna khales w el labsenha fag2a ana wenta mngher ma nkon mrtben ay haga</div>
+      </div>
+      <div>
+        <img src="ph3.jpg" alt="Memory 3">
+        <div class="caption"> lama ekhtarna el shabka (taghezat le ahla youm fe haytie)</div>
+      </div>
+      <div>
+        <img src="ph4.jpg" alt="Memory 4">
+        <div class="caption">senyt el shabka el 3amlnha b hob w tel3t ahla haga fl denya.</div>
+      </div>
+      <div>
+        <img src="ph5.jpg" alt="Memory 5">
+        <div class="caption">OUR ENGAGEMENT DAY!! ahla youm fe haytie el khalas ba2ena offcial w the first time you told me you love me!</div>
+      </div>
+      <div>
+        <img src="ph6.jpg" alt="Memory 6">
+        <div class="caption">bardo ahla youm fe haytie el shoft fe ad eh enta bthbene awy</div>
+      </div>
+      <div>
+        <img src="ph7.jpg" alt="Memory 7">
+        <div class="caption">Our first ever cinema date</div>
+      </div>
+      <div>
+        <img src="ph8.jpg" alt="Memory 8">
+        <div class="caption">the day we semi went for our dream destination(italy)</div>
+      </div>
+      <div>
+        <img src="ph9.jpg" alt="Memory 9">
+        <div class="caption">Our first musuem date</div>
+      </div>
+      <div>
+        <img src="ph10.jpg" alt="Memory 10">
+        <div class="caption">Our first arcade date</div>
+      </div>
+        <div>
+        <img src="ph11.jpg" alt="Memory 10">
+        <div class="caption">the day we went to the same place we first met w kaman mtswren gamb ka3et el khtoba</div>
+      </div>
+        <div>
+        <img src="ph12.jpg" alt="Memory 10">
+        <div class="caption">our first ever look 3ala 3afsh to build our own home that will be filled with love</div>
+      </div>
+        <div>
+        <img src="ph13.jpg" alt="Memory 10">
+        <div class="caption">when you were with me thru every step even in my grad discussion day</div>
+      </div>
+        <div>
+        <img src="p14.jpg" alt="Memory 10">
+        <div class="caption">Our first morning date</div>
+      </div>
+        <div>
+        <img src="ph15.jpg" alt="Memory 10">
+        <div class="caption">Our first ramadan iftar</div>
+      </div>
+        <div>
+        <img src="ph16.jpg" alt="Memory 10">
+        <div class="caption">Our first standup show date</div>
+      </div>
+        <div>
+        <img src="ph17.jpg" alt="Memory 10">
+        <div class="caption">when we secured the bags w gebna kol el aghza(tany youm mn el khtoba)</div>
+      </div>
+        <div>
+        <img src="ph18.jpg" alt="Memory 10">
+        <div class="caption">Our first bowling date (when you lost, as always)</div>
+      </div>
+        <div>
+        <img src="ph19.jpg" alt="Memory 10">
+        <div class="caption">when we were so anxious and were planning our engagement day</div>
+      </div>
+        <div>
+        <img src="ph20.jpg" alt="Memory 10">
+        <div class="caption">the first ever khroga after erayet el fatha</div>
+      </div>
+      <div>
+        <img src="p21.jpg" alt="Memory 10">
+        <div class="caption">Our first photobooth</div>
+      </div>
+      <div>
+        <img src="p22.jpg" alt="Memory 10">
+        <div class="caption">el youm el etmshena fe keteer awy w rawhna mashy w kan ahla youm as always</div>
+      </div>
+      <div>
+        <img src="p23.jpg" alt="Memory 10">
+        <div class="caption">bardo our strolls that i absoultely adore</div>
+      </div>
+      <div>
+        <img src="p24.jpg" alt="Memory 10">
+        <div class="caption">el youm el kona magnen fe as always</div>
+      </div>
+      <div>
+        <img src="p25.jpg" alt="Memory 10">
+        <div class="caption">our second look to build our home that there was nothing that catched our eyes</div>
+      </div>
+      <div>
+        <img src="p26.jpg" alt="Memory 10">
+        <div class="caption">Our first "semi fight" that made us love each other more and more</div>
+      </div>
+      <div>
+        <img src="p27.jpg" alt="Memory 10">
+        <div class="caption">the day that made us love each other aktar w aktar w aktar</div>
+      </div>
+
+    </section>
+    <div class="navigation">
+      <button onclick="showSlide('slide2')">Next</button>
+    </div>
+  </div>
+
+  <div class="slide" id="slide2">
+    <section>
+      <h2>20 Things I Love About You [though, i love everything about you!!!] 💙</h2>
+      <ol>
+        <li>Your smile that melts my heart</li>
+        <li>Your personality</li>
+        <li>How you always know when something’s wrong</li>
+        <li>Your kindness, even when you're tired</li>
+        <li>How you always support me</li>
+        <li>How we always know how to make everything funny</li>
+        <li>How you have shown me what love is</li>
+        <li>The feeling of comfortness i get when i'm with you</li>
+        <li>How you always understand me so easily</li>
+        <li>The way you dream about our future</li>
+        <li>Your random sweet texts</li>
+        <li>How hard worked person you are</li>
+        <li>The bond we have</li>
+        <li>When you always listen to me rant about so many random things</li>
+        <li>Your passion in everything we do</li>
+        <li>Every single memory i have with you</li>
+        <li>Your morning texts, and how you always want to treat me like a princess</li>
+        <li>When you make your number one priority</li>
+        <li>The way i can talk to you for hours and never get bored of you</li>
+        <li>You. Just you.</li>
+      </ol>
+      <div class="navigation">
+        <button onclick="showSlide('slide1')">Back</button>
+        <button onclick="showSlide('slide3')">Next</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="slide" id="slide3">
+    <section>
+      <h2>A Love Letter to You 💌</h2>
+      <div class="love-letter">
+        <p>msh 3arfa awsflk ad eh ana bahebak w ad eh ana nefsy a-show you how much i love you thru everything. i want to make everything that actually shows you how much i love you
+          begad you have no idea an abahebak ad eh. w bead every single thing made ehre is made with love. every single picture every single memory made with you
+          khaltny fe3lan aheb kol haga fe haytie (enta haytie). bahebak awy awy awy ya habeby w 3o2bal 100 sana together with us celebrating every date, every memory that lead us to be with each other and 
+          to love each other awy keda. Happy First Anniversary my love, my soulmate, and my best friend.💙💙💙💙💙💙💙💙💙💙💙💙💙💙💙💙
+        </p>
+      </div>
+      <div class="navigation">
+        <button onclick="showSlide('slide2')">Back</button>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>Made with all the love in the world 💙</p>
+  </footer>
+
+  <script>
+    function checkDate() {
+      const d = document.getElementById('day').value;
+      const m = document.getElementById('month').value;
+      const y = document.getElementById('year').value;
+      if (d === '22' && m === '6' && y === '2024') {
+        document.getElementById('lock-screen').style.display = 'none';
+        document.querySelector('#slide1').style.display = 'block';
+      } else {
+        document.getElementById('error').textContent = 'Hmm… try again baby 💙';
+      }
+    }
+    function showSlide(id) {
+      document.querySelectorAll('.slide').forEach(slide => slide.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
